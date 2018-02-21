@@ -6,7 +6,7 @@ public class rightspawn : MonoBehaviour {
 	
  	public GameObject LEftCube;
 	private GameObject lefttile;
-
+	 
 	void Start () 
 	{
 		trial_script.y = transform.position.y;
@@ -20,6 +20,8 @@ public class rightspawn : MonoBehaviour {
 			trial_script.y = transform.position.y;
 			lefttile = Instantiate (LEftCube, transform.position, Quaternion.identity) as GameObject;
 			this.lefttile.transform.position += this.transform.forward * Random.Range(0f,0.00001f)* Time.deltaTime;
+
+			//trial_script.y =lefttile.transform.position.y+1;
 		}
 
 	}

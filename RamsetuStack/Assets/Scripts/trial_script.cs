@@ -8,7 +8,7 @@ public class trial_script : MonoBehaviour
 
 	//public GameObject LEftCube;
 	public static float y;
-	Vector3 EndPos;
+	public Vector3 EndPos;
 	public float fracTime=1f;
 //	private float spawnTime=1f;
 
@@ -19,7 +19,7 @@ public class trial_script : MonoBehaviour
 		EndPos.x = 0;
 
 		EndPos.z = 1;
-		EndPos.y = y;
+		EndPos.y =y ;
 
 	
 
@@ -27,15 +27,7 @@ public class trial_script : MonoBehaviour
 		//InvokeRepeating("Spawn", spawnTime, 0);
 
 	}
-//	void Spawn()
-//	{
-//		
-//		if (EndPos.y==y ) 
-//		{
-//			//EndPos.y += 1;
-//			return ;
-//		}
-//	}
+
 
 
 
@@ -44,7 +36,6 @@ public class trial_script : MonoBehaviour
 		fracTime += 0.01f;
 		transform.position = Vector3.Lerp (startPos, EndPos,fracTime);	
 
-	
 	}
 
 

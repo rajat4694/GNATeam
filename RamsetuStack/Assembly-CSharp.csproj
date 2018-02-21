@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\ScoreKeeper.cs" />
      <Compile Include="Assets\Scripts\blockspawner.cs" />
      <Compile Include="Assets\Scripts\instantiate.cs" />
+     <Compile Include="Assets\Scripts\instantiateRightLeftSpawn.cs" />
      <Compile Include="Assets\Scripts\leftspawn.cs" />
      <Compile Include="Assets\Scripts\levelmanager.cs" />
      <Compile Include="Assets\Scripts\playerController.cs" />

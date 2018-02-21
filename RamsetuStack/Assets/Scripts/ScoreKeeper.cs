@@ -9,9 +9,9 @@ public class ScoreKeeper : MonoBehaviour {
 
 
 
-	public void Start()
+	public void Update()
 	{
-		t1.text = setActiveScript.f1;
+		t1.text = instantiateRightLeftSpawn.f1;
 
 
 	}

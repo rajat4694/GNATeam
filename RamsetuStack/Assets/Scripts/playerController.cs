@@ -18,7 +18,6 @@ public class playerController : MonoBehaviour
 	void Start()
 	{
 		controller = GetComponent<CharacterController> ();
-	//	LeftCube = GetComponent<GameObject> ();
 	}
 
 	void Update()
@@ -26,19 +25,17 @@ public class playerController : MonoBehaviour
 
 		if (controller.isGrounded)
 		{
-			
 			verticalVelocity = -gravity * Time.deltaTime;
 			if (Input.GetKeyDown (KeyCode.Space)) 
 			{
 				verticalVelocity = jumpForce;	
-
 			}
 		} 
 
 		else 
-			{
-				verticalVelocity -= gravity * Time.deltaTime;
-			}
+		{
+			verticalVelocity -= gravity * Time.deltaTime;
+		}
 			
 			moveVector = new Vector3 (0, verticalVelocity, 0);
 			controller.Move (moveVector * Time.deltaTime);
@@ -57,12 +54,12 @@ public class playerController : MonoBehaviour
 			SceneManager.LoadScene ("End Scene");
 
 		}
-			else if (col.gameObject.name=="LEftCube") 
-			{
-				leftspawn.GetComponent<leftspawn> ().LEftCube.transform.position = this.transform.position;
-				rightspawn.GetComponent<rightspawn> ().LEftCube.transform.position = this.transform.position;
-				
-			}
+//			else if (col.gameObject.name=="LEftCube") 
+//			{
+////				leftspawn.GetComponent<leftspawn> ().LEftCube.transform.position = this.transform.position;
+////				rightspawn.GetComponent<rightspawn> ().LEftCube.transform.position = this.transform.position;
+//				
+//			}
 	}
 
 
