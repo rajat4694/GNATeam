@@ -43,6 +43,7 @@ public class playerController : MonoBehaviour
 
 	void OnCollisionEnter(Collision col)
 	{
+
 		if (col.gameObject.name=="collider" || player.transform.position.y < -5.0f) 
 		{
 			
@@ -54,13 +55,10 @@ public class playerController : MonoBehaviour
 			SceneManager.LoadScene ("End Scene");
 
 		}
-//			else if (col.gameObject.name=="LEftCube") 
-//			{
-////				leftspawn.GetComponent<leftspawn> ().LEftCube.transform.position = this.transform.position;
-////				rightspawn.GetComponent<rightspawn> ().LEftCube.transform.position = this.transform.position;
-//				
-//			}
+	
 	}
+
+
 
 
 

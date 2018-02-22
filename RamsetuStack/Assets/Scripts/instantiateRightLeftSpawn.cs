@@ -11,8 +11,8 @@ public class instantiateRightLeftSpawn : MonoBehaviour {
 	public GameObject instatiateLeft,instantiateRight;
 	public CharacterController cc;
     private float freqValue =1f;
-	//private int score;
-	private int count=0;
+	private int score;
+	private static int count=0;
 	public static string f1;
 	private int check;
 	public GameObject playerc;
@@ -30,11 +30,14 @@ public class instantiateRightLeftSpawn : MonoBehaviour {
 		if (freqValue % 60 == 0 && check % 2 == 0 && lefttile.transform.position.x == 0f && cc.isGrounded) 
 		{
 			instantiateOneByRight ();
+			count++;
+			InvokeRepeating ("OnCollisionEnter", freqValue, freqValue % 60 );
 
 		} 
 		else if (freqValue % 60 == 0 && check % 2 != 0 && lefttile.transform.position.x == 0f && cc.isGrounded) 
 		{
 			instantiateOneByLeft ();
+			count++;
 		}
 	}
 
@@ -48,9 +51,10 @@ public class instantiateRightLeftSpawn : MonoBehaviour {
 		instatiateLeft.SetActive (false);
 		instantiateRight.SetActive (true);
 
-		S1.text = count.ToString ();
+		score = count;
+		S1.text = score.ToString ();
 		f1 = S1.text;
-		count++;
+
 	}
 
 	void instantiateOneByRight() 
@@ -62,9 +66,21 @@ public class instantiateRightLeftSpawn : MonoBehaviour {
 		instatiateLeft.SetActive (true);
 		instantiateRight.SetActive (false);
 
-		S1.text = count.ToString ();
+		score = count;
+		S1.text = score.ToString ();
 		f1 = S1.text;
-		count++;
+
 	}
+
+	void OnCollisionEnter(Collision col)
+	{
+		//Debug.Log ("aa gaya");
+		if (col.gameObject.name=="player") 
+		{
+			Debug.Log ("aa gaya");
+			
+		}
+	}
+
 
 }

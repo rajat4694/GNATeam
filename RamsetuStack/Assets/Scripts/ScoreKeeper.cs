@@ -7,12 +7,9 @@ public class ScoreKeeper : MonoBehaviour {
 
 	public Text t1;
 
-
-
 	public void Update()
 	{
 		t1.text = instantiateRightLeftSpawn.f1;
-
 
 	}
 
